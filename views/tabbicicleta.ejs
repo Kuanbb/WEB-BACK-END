@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Bicicletas</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Preço</th>
+        </thead>
+        <tbody>
+            <% magrelas.forEach(magrelas=>{ %>
+                <tr>
+                    <td><%= magrelas.modelo%></td>
+                    <td><%= magrelas.marca %></td>
+                    <td><%= magrelas.preco %></td>
+                    <td>
+                        <a href="/magrelas/Alt/<%= magrelas.id%>">Editar</a>
+                        <a href="/magrelas/delete/<%= magrelas.id%>">Deletar</a>
+                    </td>
+                </tr>        
+            <%})%>
+        </tbody>
+    </table>
+    <a href="/cadBicicleta">Adicionar + 1 modelo</a>
+</body>
+<script>
+</script>
+</html>
